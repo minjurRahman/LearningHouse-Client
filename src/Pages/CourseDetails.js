@@ -1,10 +1,21 @@
 import React from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
 
 const CourseDetails = () => {
+    const course = useLoaderData();
+    const {id, title, details, image_url} = course;
     return (
-        <div>
-            <h1>Course details</h1>
-        </div>
+        <Card className='container w-50'>
+        <Card.Img variant="top" src={image_url} />
+        <Card.Body>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>
+            {details}
+          </Card.Text>
+          <Link to='/courses-category'>Courses</Link>
+        </Card.Body>
+      </Card>
     );
 };
 
