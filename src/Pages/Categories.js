@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import Courses from './Courses';
+import Button from 'react-bootstrap/Button';
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Categories = () => {
     const [categories, setCategories] = useState([]); 
@@ -12,8 +14,8 @@ const Categories = () => {
         .then(data => setCategories(data))
     }, [])
     return (
-          <div className='text-center'>
-            <h1>Categoris:{categories.length} </h1>
+          <div className=''>
+            <h1>Courses</h1>
             <div className='inline'>
                 {
                     categories.map(category => <h6 key={category.id}>

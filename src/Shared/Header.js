@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { AuthContext } from '../Context/AuthProvider';
 
 
 const Header = () => {
+  const {user} = useContext(AuthContext);
     return (
-        <Navbar collapseOnSelect className='mb-4' expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect className='' expand="lg" bg="dark" variant="dark">
         <Container>
           <p className='text-white'>logo</p>
           <Navbar.Brand href="#home">Learning House</Navbar.Brand>
@@ -19,7 +21,7 @@ const Header = () => {
               <Nav.Link href="/blog">Blog</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
+              <Nav.Link href="#deets">{user?.displayName}</Nav.Link>
               <label className="checkbox-inline">
                  <input className='text-white' type="checkbox" checked data-toggle="toggle"/> First
               </label>

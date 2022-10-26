@@ -33,7 +33,7 @@ const Home = () => {
             <h5>Or sign in using:</h5>
               <Button variant="primary"><FaGoogle></FaGoogle> Google</Button>{' '}
               <Button variant="secondary"><FaGithub></FaGithub> GitHub</Button>{' '}
-             {/* <Button variant="info">Info</Button>{' '} */}
+             
           </div>
         </form>
       </div>
