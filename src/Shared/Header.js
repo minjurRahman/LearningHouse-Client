@@ -23,7 +23,7 @@ const Header = () => {
               <label className="checkbox-inline">
                  <input className='text-white' type="checkbox" checked data-toggle="toggle"/> First
               </label>
-              <Nav.Link eventKey={2} href="#memes">
+              <Nav.Link eventKey={2} href="/">
                 Dank memes
               </Nav.Link>
             </Nav>

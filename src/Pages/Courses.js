@@ -1,11 +1,19 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import CoursSummary from './CoursSummary';
 
 const Courses = () => {
     const courseData = useLoaderData()
-    console.log(courseData)
+    
     return (
-        <div>aksjdhkAH :dfhgk  </div>
+        <div>
+        {
+          courseData.map(course => <CoursSummary
+          key={course.id}
+          course={course}
+          ></CoursSummary>)
+        }
+        </div>
     );
 };
 

@@ -1,5 +1,7 @@
 import React, { createContext } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 import { Outlet } from 'react-router-dom';
+import Categories from '../Pages/Categories';
 import Footer from '../Shared/Footer';
 import Header from '../Shared/Header';
 
