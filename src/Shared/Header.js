@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
+import { Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { FaUser } from 'react-icons/fa';
 import { AuthContext } from '../Context/AuthProvider';
-
 
 const Header = () => {
   const {user} = useContext(AuthContext);
@@ -21,7 +22,13 @@ const Header = () => {
               <Nav.Link href="/blog">Blog</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">{user?.displayName}</Nav.Link>
+              <Nav.Link title={user?.displayName} href="#deets">
+                {
+                  user.photoURL ?
+                  <Image style={{height: '40px'}} roundedCircle src={user.photoURL}></Image>:
+                  <FaUser></FaUser>
+                }
+              </Nav.Link>
               <label className="checkbox-inline">
                  <input className='text-white' type="checkbox" checked data-toggle="toggle"/> First
               </label>
