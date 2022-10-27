@@ -34,12 +34,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/category/:id',
                 element: <Courses></Courses>,
-                loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`),
+                loader: ({params}) => fetch(`https://b610-lerning-platform-server-side-minjurrahman.vercel.app/category/${params.id}`),
             },
             {
                 path:'/courses-details/:id', //news/:id
                 element: <PrivateRoute><CourseDetails></CourseDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/course/${params.id}`)
+                loader: ({params}) => fetch(`https://b610-lerning-platform-server-side-minjurrahman.vercel.app/course/${params.id}`)
             },
             {
                 path:'/login',
