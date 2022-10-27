@@ -8,7 +8,7 @@ import { AuthContext } from '../Context/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const SecondH = () => {
-    const { user, setUser, providerLogin } = useContext(AuthContext);
+    const { user, setUser, setLoading, providerLogin } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
@@ -31,6 +31,9 @@ const SecondH = () => {
             console.log(user);
         })
         .catch(error => console.error(error))
+        .finally(() =>{
+          setLoading(false);
+        })
     }
 
 
