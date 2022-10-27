@@ -16,7 +16,7 @@ const CoursSummary = ({course}) => {
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>
                   {details?.length > 100 ?
-                   <p>{details?.slice(0, 100) + '...'} <Link to={`/courses-details/${id}`}>See More</Link></p> : <p> {details}</p>}
+                   <>{details?.slice(0, 100) + '...'} <Link to={`/courses-details/${id}`}>See More</Link></> : <> {details}</>}
                 </Card.Text>
               </Card.Body>
             </Card>

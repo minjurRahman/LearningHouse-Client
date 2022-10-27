@@ -30,7 +30,7 @@ const Header = () => {
               <Nav.Link href="/blog">Blog</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link>
+              <>
                 {
                   user?.uid ?
                   <>
@@ -42,14 +42,14 @@ const Header = () => {
                    <Link to='/register'><Button variant="light">Register</Button></Link>
                   </>
                 }
-              </Nav.Link>
-              <Nav.Link title={user?.displayName} href="#deets">
+              </>
+              <Link title={user?.displayName} to='/profile'>
                 {
                   user?.photoURL ?
                   <Image style={{height: '40px'}} roundedCircle src={user?.photoURL}></Image>:
                   <FaUser></FaUser>
                 }
-              </Nav.Link>
+              </Link>
               <label className="checkbox-inline">
                  <input className='text-white' type="checkbox" checked data-toggle="toggle"/> First
               </label>

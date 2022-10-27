@@ -1,7 +1,8 @@
 import React, { useContext, useRef, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { AuthContext } from '../../Context/AuthProvider';
+import { AuthContext } from '../Context/AuthProvider';
+// import { AuthContext } from '../../Context/AuthProvider';
 
 const Profile = () => {
     const {user} = useContext(AuthContext);
