@@ -10,13 +10,14 @@ import Blog from "../Pages/Blog";
 import Register from "../Login/Register";
 import Login from "../Login/Login";
 import PrivateRoute from "./PrivateRoute";
+import TermsAndCondition from "../Pages/TermsAndCondition";
 
 
 export const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
-        // errorElement: <ErrorPage></ErrorPage>,
+        errorElement: <ErrorPage></ErrorPage>,
   
         children: [
             {
@@ -45,6 +46,10 @@ export const routes = createBrowserRouter([
             {
                 path:'/register',
                 element: <Register></Register>
+            },
+            {
+                path:'/terms',
+                element: <TermsAndCondition></TermsAndCondition>
             },
             {
                 path:'/faq',
