@@ -9,13 +9,14 @@ import Faq from "../Pages/Faq";
 import Blog from "../Pages/Blog";
 import Register from "../Login/Register";
 import Login from "../Login/Login";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
-        errorElement: <ErrorPage></ErrorPage>,
+        // errorElement: <ErrorPage></ErrorPage>,
   
         children: [
             {
@@ -34,7 +35,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path:'/courses-details/:id', //news/:id
-                element: <CourseDetails></CourseDetails>,
+                element: <PrivateRoute><CourseDetails></CourseDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/course/${params.id}`)
             },
             {

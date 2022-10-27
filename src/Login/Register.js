@@ -4,7 +4,6 @@ import Form from 'react-bootstrap/Form';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
-// import { AuthContext } from '../../Context/AuthProvider';
 
 const Register = () => {
     const [error, setError] = useState('')
