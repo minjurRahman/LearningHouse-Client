@@ -37,7 +37,7 @@ const SecondH = () => {
     return (
         <Navbar>
         <Container>
-          <Navbar.Brand href="#home">You sign in using:</Navbar.Brand>
+          <Navbar.Brand href="#home">Sign in with:</Navbar.Brand>
           <Button onClick={handleGooglesignIn} className='me-2' variant="primary"><FaGoogle></FaGoogle> Google</Button>{' '}
           <Button onClick={handleGithubSignIn} className='me-2' variant="secondary"><FaGithub></FaGithub> GitHub</Button>{' '}
           <Navbar.Toggle />

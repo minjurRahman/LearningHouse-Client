@@ -94,6 +94,7 @@ const Register = () => {
         <Form.Text className="text-danger">
             {error}
           </Form.Text>
+          <p className='mt-3'>Already Loged in? Then, go to <Link to='/login'>Log in</Link></p>
       </Form>
     );
 };

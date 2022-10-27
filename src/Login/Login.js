@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import toast from 'react-hot-toast';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 
 
@@ -67,7 +67,9 @@ const Login = () => {
         <Form.Text className="text-danger">
            {error}
           </Form.Text>
+          <p className='mt-3'>Already Register? if not, go to <Link to='/register'>Register</Link></p>
       </Form>
+      
     );
 };
 

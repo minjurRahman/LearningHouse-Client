@@ -2,12 +2,12 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="container page-footer font-small blue pt-4 border">
+        <footer className=" mt-5 container page-footer font-small blue pt-4 border">
         <div className="container-fluid text-center text-md-left">
             <div className="row">
                 <div className="col-md-6 mt-md-0 mt-3">
-                    <h5 className="text-uppercase">Footer Content</h5>
-                    <p>Here you can use rows and columns to organize your footer content.</p>
+                    <h5 className="text-uppercase">Don't miss learning</h5>
+                    <p>Contact us.</p>
                 </div>
     
                 <hr className="clearfix w-100 d-md-none pb-0"/>
@@ -34,7 +34,7 @@ const Footer = () => {
             </div>
         </div>
     
-        <div className="footer-copyright text-center py-3">© 2020 Copyright:
+        <div className="footer-copyright text-center py-3">© 2022 Copyright:
             <a href="/">Learning House</a>
         </div>
     

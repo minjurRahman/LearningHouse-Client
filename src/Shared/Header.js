@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -6,9 +6,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
+import learning from '../image/learning.png'
 
 const Header = () => {
   const {user, logOut} = useContext(AuthContext);
+
+  const [toggled, setToggled] = useState(false);
 
   const handleLogOut = () =>{
     logOut()
@@ -21,7 +24,7 @@ const Header = () => {
         <Container>
           <div>
             {/* <img src='/public/learning.png'></img> */}
-            <Image style={{height: '40px'}} roundedCircle src='../image/learning.png'></Image>
+            <Image style={{height: '40px'}} roundedCircle src={learning}></Image>
           <Navbar.Brand href="#home">Learning House</Navbar.Brand>
           </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -46,18 +49,16 @@ const Header = () => {
                   </>
                 }
               </>
-              <Link title={user?.displayName} to='/profile'>
+              <Link className='ms-2' title={user?.displayName} to='/profile'>
                 {
                   user?.photoURL ?
                   <Image style={{height: '40px'}} roundedCircle src={user?.photoURL}></Image>:
                   <FaUser></FaUser>
                 }
               </Link>
-              <label className="checkbox-inline">
-                 <input className='text-white' type="checkbox" checked data-toggle="toggle"/> First
-              </label>
-              <Nav.Link eventKey={2} href="/">
-                Dank memes
+
+              <Nav.Link eventKey={2} href="">
+                <input onChange={(event) => setToggled(event.target.checked)} className='roundedCircle' type='checkbox'></input>{toggled ? "Light" : "Dark"}
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

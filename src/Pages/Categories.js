@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import { Link, useLoaderData } from 'react-router-dom';
-import Courses from './Courses';
-import Button from 'react-bootstrap/Button';
-import { FaGoogle, FaGithub } from "react-icons/fa";
+import { Link, } from 'react-router-dom';
+
 
 const Categories = () => {
     const [categories, setCategories] = useState([]); 
@@ -14,7 +11,7 @@ const Categories = () => {
         .then(data => setCategories(data))
     }, [])
     return (
-          <div className=''>
+          <div >
             <h1>Courses</h1>
             <div className='inline'>
                 {

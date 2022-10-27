@@ -13,7 +13,7 @@ const CourseDetails = () => {
           <Card.Text>
             {details}
           </Card.Text>
-          <Link to='/courses-category'>Courses</Link>
+          <Link to='/'>Home</Link>
         </Card.Body>
       </Card>
     );
