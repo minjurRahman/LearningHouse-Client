@@ -19,8 +19,11 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect className='' expand="lg" bg="dark" variant="dark">
         <Container>
-          <p className='text-white'>logo</p>
+          <div>
+            {/* <img src='/public/learning.png'></img> */}
+            <Image style={{height: '40px'}} roundedCircle src='../image/learning.png'></Image>
           <Navbar.Brand href="#home">Learning House</Navbar.Brand>
+          </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">

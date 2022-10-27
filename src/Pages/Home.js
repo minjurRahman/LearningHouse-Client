@@ -11,7 +11,7 @@ const Home = () => {
             <h1 className="display-4 fw-bold lh-1 mb-3">Vertically centered hero sign-up form</h1>
             <p className="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
           </div>
-          <div className="col-md-10 mx-auto col-lg-5">
+          {/* <div className="col-md-10 mx-auto col-lg-5">
         <form className="p-4 p-md-5 border rounded-3 bg-light">
           <div className="form-floating mb-3">
             <input type="email" name='email' className="form-control" id="floatingInput" placeholder="name@example.com"/>
@@ -36,7 +36,7 @@ const Home = () => {
              
           </div>
         </form>
-      </div>
+      </div> */}
     </div>
   </div>
         </div>
